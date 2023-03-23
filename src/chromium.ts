@@ -115,7 +115,7 @@ export class ChromiumHandler {
         }
 
         const fetcher = new puppeteer.BrowserFetcher({ path: installDirectory });
-        const revisionToInstall: string = puppeteer.PUPPETEER_REVISIONS.chromium;
+        const revisionToInstall: string = (puppeteer as any).PUPPETEER_REVISIONS.chromium;
         console.info(`Installing Chromium revision ${revisionToInstall} into '${installDirectory}'...`);
         await fetcher.download(revisionToInstall, onProgress).then(onSuccess).catch(onError);
 

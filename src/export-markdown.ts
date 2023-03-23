@@ -56,7 +56,7 @@ export class ExportMarkdown {
 
     private async toHTML( text: string ): Promise<string> {
         const window = new JSDOM('').window;
-        const sanitizer = DOMPurify(window);
+        const sanitizer = DOMPurify(window as any);
 
         const html = marked.parse(text);
         const clean = sanitizer.sanitize(html);
