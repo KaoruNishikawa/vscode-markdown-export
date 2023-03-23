@@ -1,6 +1,6 @@
 import * as vscode from 'vscode';
-import * as path from 'path';
-import * as marked from 'marked';
+import * as path from 'node:path';
+import { marked } from 'marked';
 import DOMPurify from 'dompurify';
 import  { JSDOM } from 'jsdom';
 import * as puppeteer from 'puppeteer-core';
