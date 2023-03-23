@@ -68,6 +68,8 @@ export class ChromiumHandler {
             } else if ( selected === 'Configure Chromium Path' ) {
                 vscode.commands.executeCommand('workbench.action.openSettings', 'markdown-export.chrome.path');
                 return;
+            } else {
+                return;
             }
         }, (error: Error) => {
             console.error(error);
